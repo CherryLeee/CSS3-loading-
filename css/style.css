@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.box{
+    width: 200px;
+    height: 100px;
+    /*background-color: lightcoral;*/
+    background: radial-gradient( red 25%, lightcoral 40%, #fff 100%);
+    /*margin-left: -100px;*/
+    margin-top: -50px;
+    position: absolute;
+    top:50%;
+    /*left:50%;*/
+    border-radius: 50px;
+
+    /*border-radius: 30px 80px;/*左上+右下*/
+    /*border-radius: 10px 20px 30px;左上 右上+左下 右下*/
+}
+@keyframes mymove {
+    0%{
+        left:100px;
+    }
+    100%{
+        left: 900px;
+    }
+}
+.box{
+    animation: mymove 2s linear;
+    animation-fill-mode: both;/*backwards:在当前动画有延迟的情况下，我们让元素处于第一帧的位置。
+     */
+}
